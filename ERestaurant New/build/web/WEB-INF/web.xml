@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee                                         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <context-param>
+        <param-name>aemail</param-name>
+        <param-value>your email id</param-value>
+    </context-param>
+    <context-param>
+        <param-name>apass</param-name>
+        <param-value>your password</param-value>
+    </context-param>
+    <listener>
+        <listener-class>ConListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>AddItem</servlet-name>
+        <servlet-class>AddItem</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetPhoto</servlet-name>
+        <servlet-class>GetPhoto</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ModifyItem</servlet-name>
+        <servlet-class>ModifyItem</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddItem</servlet-name>
+        <url-pattern>/AI</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetPhoto</servlet-name>
+        <url-pattern>/GetPhoto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ModifyItem</servlet-name>
+        <url-pattern>/MI</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
